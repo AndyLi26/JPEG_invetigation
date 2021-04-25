@@ -1,4 +1,4 @@
-function readImage()
+function readImage(file_path)
 
 %a = 0; %random for return
 
