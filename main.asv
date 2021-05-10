@@ -1,0 +1,8 @@
+%load image
+load("'.\data\data'");
+T=getDCTmatrix(N);
+D=Dct(original_image,T);
+Q=getQ(N,1);
+compressed_image=compress(D,Q);
+depressed_image=depress(compressed_image,Q);
+retrived_image=deDCT(depressed_image,T)

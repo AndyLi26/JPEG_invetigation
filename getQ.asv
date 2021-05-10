@@ -1,0 +1,16 @@
+function Q=getQ(N,Qtype)
+if Qtype==1
+    %linear Q, factor will increase when it 
+    Q=zeros(N);stepSize=(120-10)/2/(N-1);
+    start=10;
+    for i=1:N
+        current=start;
+        for j=1:N
+            Q(i,j)=current;
+            current=current+stepSize;
+        end
+        start=start+stepSize;
+    end
+    Q(1,1)=16;Q(N,N)=99;
+end
+end

@@ -1,6 +1,5 @@
  function T= getDCTmatrix(N)
  %return a N x N Transformation Matrix
-N=8;
 T=zeros(N,N);
 T(1,:)=ones(1,N)/sqrt(N);
 for i=2:N

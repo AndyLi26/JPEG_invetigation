@@ -1,10 +1,10 @@
 function Compressed_image=compress(D,Q)
-Q50=[16 11 10 16 24 40 51 61;
-12 12 14 19 26 58 60 55;
-14 13 16 24 40 57 69 56;
-14 17 22 29 51 87 80 62;
-18 22 37 56 68 109 103 77;
-24 35 55 64 81 104 113 92;
-49 64 78 87 103 121 120 101;
-72 92 95 98 112 100 103 99];
+N=length(Q);
+Compressed_image=zeros(floor(size(D,1)/N)*N,floor(size(D,2)/N)*N);
+for i = 1:floor(size(D,1)/N)
+    for j = 1:floor(size(D,2)/N)
+        M=D((i-1)*N+1:i*N,(j-1)*N+1:j*N);
+        Compressed_image((i-1)*N+1:i*N,(j-1)*N+1:j*N)=round(M./Q);
+    end
+end
 end
