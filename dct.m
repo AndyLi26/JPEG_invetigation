@@ -1,23 +1,11 @@
-function [CN,c] = dct(N,x)
+function [D]=Dct(original_image,N)
 
-len_x=length(x);
-X=[x zeros(1,N-len_x)];
-CN=zeros(N);
-for n=0:N-1
-    for k=0:N-1
-        if k==0
-            CN(k+1,n+1)=sqrt(1/N);
-        else
-            CN(k+1,n+1)=sqrt(2/N)*cos(pi*(n+0.5)*k/N);
-        end
+D=zeros(floor(size(original_image,1)/N)*N,floor(size(original_image,2)/N)*N);
+T=getDCTmatrix(N);
+for i = 1:floor(size(original_image,1)/N)
+    for j = 1:floor(size(original_image,2)/N)
+        block=original_image((i-1)*N+1:i*N,(j-1)*N+1:j*N);
+        D((i-1)*N+1:i*N,(j-1)*N+1:j*N)=T*block*T';
     end
 end
-c = CN*X.';
-c = c';
-
-% subplot(211);
-% stem(x);
-% title('Input sequence');
-% subplot(212);
-% stem(c);
-% title('Output dct sequence');
+end

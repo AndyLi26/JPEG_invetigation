@@ -12,7 +12,7 @@ function readImage(file_path)
     end
     
 %%  Save image as matlab data
-    save('.\data\data');
+    save('.\data\data','image');
     
 %% Save image as txt
     % f = fopen('.\data\data.txt','w');
