@@ -1,7 +1,4 @@
 function readImage(file_path)
-
-%a = 0; %random for return
-
 %% Read image under the imag file       
     file_path =  '.\imag\';
     img_path_list =  dir(strcat(file_path,'*.jpg'));%get jpg file
