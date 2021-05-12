@@ -1,4 +1,4 @@
-function readImage(file_path)
+function image=readImage(file_path)
 %% Read image under the imag file       
     file_path =  '.\imag\';
     img_path_list =  dir(strcat(file_path,'*.jpg'));%get jpg file

@@ -1,6 +1,6 @@
 function ycbcr = toYCbCr(rgb)
 
-rgb = image;
+%rgb = image;
 ycbcr = zeros(size(rgb));
 fR = rgb(:, :, 1);
 fG = rgb(:, :, 2);
