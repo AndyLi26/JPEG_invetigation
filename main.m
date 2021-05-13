@@ -13,7 +13,7 @@ imshow(uint8(image))
 
 %JPEG
 new_img=JPEG(image,N,Q_factor);
-
+[err,symbols_saved,z0s]=after_process(image,new_img);
 % Image after DCT
 figure
 imshow(uint8(new_img))
