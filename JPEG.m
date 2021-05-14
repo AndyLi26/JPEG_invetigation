@@ -3,10 +3,9 @@ img=img-128;
 YCbCr=toYCbCr(img);
 new_img_YCbCr=zeros(size(img));
 unique_list=[];z0s=0;
+Q=getQ(N);T=getDCTmatrix(N);
 for i=1:3
-    T=getDCTmatrix(N);
     D=Dct(YCbCr(:,:,i),T);
-    Q=getQ(N);
     compressed_image=compress(D,Q);%DCT domain
     unique_list=[unique_list;unique(compressed_image)];
     z0s=z0s+sum(compressed_image(:)==0);
