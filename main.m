@@ -59,5 +59,6 @@ xlabel("n");ylabel("average r^2");
 figure;
 plot(1:n-1,ave_z0s(1:n-1));
 xlabel("n");ylabel("zeros in each image (%)");
+clear image;
 save("data\collected_3");
 toc
