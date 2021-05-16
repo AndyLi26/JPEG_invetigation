@@ -1,3 +1,5 @@
 
 *.mat
 data/data.mat
+*.jpg
+*.mat

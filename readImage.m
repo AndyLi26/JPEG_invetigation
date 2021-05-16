@@ -10,9 +10,4 @@ function image=readImage(file_path)
     
 %%  Save image as matlab data
     save('.\data\data','image');
-    
-%% Save image as txt
-    % f = fopen('.\data\data.txt','w');
-    % fprintf(f,'%f',image);
-    % close all;
 
